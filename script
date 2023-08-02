@@ -1,0 +1,25 @@
+local OrionLib = loadstring(game:HttpGet(('https://github.com/Pha-N-toM/farminghub/blob/main/script.lua')))()
+local Window = OrionLib:MakeWindow({Name = "Farming Hub"})
+OrionLib:MakeNotification({
+	Name = "Welcome",
+	Content = "Lets Start Farming!",
+	Image = "rbxassetid://4483345998",
+	Time = 30
+})
+local Tab = Window:MakeTab({
+	Name = "Strength Training",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+Tab:AddSlider({
+	Name = "Amount",
+	Min = 0,
+	Max = 10,
+	Default = 2,
+	Color = Color3.fromRGB(255,255,255),
+	Increment = 1,
+	ValueName = "Strength Amount",
+	Callback = function(Value)
+		print(Value)
+	end    
+})
